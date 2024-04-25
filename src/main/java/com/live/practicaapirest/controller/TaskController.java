@@ -35,7 +35,7 @@ public class TaskController {
         return taskService.getTaskById(id);
     }
 
-    @PutMapping
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public TaskDto updateTask(@RequestBody TaskDto task) {
         return taskService.updateTask(task);
